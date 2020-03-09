@@ -18,5 +18,9 @@ Exceptions are application errors and should not be used to communicate informat
 
 - **PREFER** Existing exception classes over custom classes for returning additional data.
 
-  If the exception can be described in a string, it should be. If the objection is that the string cannot be parsed, then an exception is not the best way to communicate a failure back to the caller and the API should be revised.
+  The Message property should describe the nature of the problem. If the exception *can* be described in a string, it *should* be. 
+  
+  If the objection is that the string cannot be parsed, then that means that you expect the receiver to act upon the result of the exception, in which case it should be considered part of the *expected flow* of an API, is inherently recoverable, and shouldn't raise an exception.
+  
+ 
  
