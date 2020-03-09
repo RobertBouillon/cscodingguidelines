@@ -37,7 +37,7 @@
 
   A product is done when it is "Feature Complete." Software is done when there is nothing left to refactor.
     
-- **A *Minimum Viable Product* should apply to the features of an application, not the implementation*
+- **A *Minimum Viable Product* should apply to the features of an application, not the implementation**
   
   MVP is not a good way to avoid engineering, as it's often an excuse to forego testing, documentation, and refactoring of complex code.
   
@@ -45,7 +45,7 @@
   
   There are no "hard and fast" rules to prevent over-engineering, however MVP is often used as the basis for determing what work goes into the implementation of a feature. MVP should be used to determine what features to include as part of a product. It should not be used as an excluse to cannibalize the effort required to harden code and resolve technical debt.
 
-- Good code should read like a good book, and should tell a good story
+- **Good code should read like a good book, and should tell a good story**
 
   Reading code shouldn't be like deciphering hyroglyphics. This is especially applicable to C#, which has best-in-class support for object-oriented principles. 
   
