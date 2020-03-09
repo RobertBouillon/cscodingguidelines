@@ -3,6 +3,12 @@
 ## General Guidelines
 Exceptions are application errors and should not be used to communicate information during normal, expected operations. An exception means that **an unrecoverable condition has occurred**. As such, do not *throw* an exception unless an unrecoverable condition has occurred.
 
+When an exception is thrown, it has to perform a number of [expensive operations](https://mattwarren.org/2019/01/21/Stackwalking-in-the-.NET-Runtime/) designed to assist a developer in debugging and diagnosing a problem. If an exception is used to communicate information during a normal operation, then all of this work is an unnecessary and expensive performance hit that will silently impact your application's performance.
+
+When debugging, you should be able to **Break on Exception** and effectively debug any issues. If you're throwing exceptions that aren't *really* errors, you spend a lot of time continuing past exceptions that aren't *really* exceptions until you get to the exception you're trying to debug. This is the case with most Java applications, which is why most Java applications rely exclusively (or at least primarily) on trace logging. While it's possible to configure the IDE to only break on the error that meets a tight criteria for the issue being debugged, it's onerous and imperfect. 
+
+If you want to be able to debug your application, don't throw unnecessary exceptions.
+
 ## Try / Catch
 - **AVOID** Exception handling in member functions. 
 
