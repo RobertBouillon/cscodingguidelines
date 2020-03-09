@@ -27,17 +27,17 @@
   
   *If the justification is that there's a rule requiring that all code be commented, then it's a stupid rule and the rule needs to change. No rules should require you to perform work that does not add value. If boiler-plate comments are really necessary, the effort is better invested in code that can generate documentation where codecomments are absent.*
    
-- Iterative development creates technical debt
-  
+- **Iterative development creates technical debt**  
+
   Every new feature you add creates technical debt. Every. Single. One. The nature of patterns is that they represent information that is repeated. In iterative development, as we sporatically add to a code base over time, new patterns will emerge. 
   
-  You must periodically review the code for technical debt to simplify the code base.
+  You must periodically review the code for technical debt to simplify the code base, extrapolating patterns and refactoring to simplify the code.
 
   *"Perfection is acheived not when there's nothing left to add, but when there's nothing left to take away. --Antoine de Saint-Exupery"* 
 
-  A product is done when it is "Feature Complete." Software is done when there is nothing left to remove.
+  A product is done when it is "Feature Complete." Software is done when there is nothing left to refactor.
     
-- A **Minimum Viable Product** should apply to the features of an application, not the implementation
+- **A *Minimum Viable Product* should apply to the features of an application, not the implementation*
   
   MVP is not a good way to avoid engineering, as it's often an excuse to forego testing, documentation, and refactoring of complex code.
   
