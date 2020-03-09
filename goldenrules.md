@@ -39,11 +39,13 @@
     
 - **A *Minimum Viable Product* should apply to the features of an application, not the implementation**
   
-  MVP is not a good way to avoid engineering, as it's often an excuse to forego testing, documentation, and refactoring of complex code.
+  MVP is not a good way to avoid over-engineering, as it's often an excuse to forego testing, documentation, and refactoring of complex code.
   
-  The essence of over-engineering is solving problems that aren't problems yet, however 80% of our job is knowing what *could* break as a result of the code we write, and covering all of those cases. It takes years of experience to know where to draw the line with new features. 
+  The essence of over-engineering is solving problems that aren't problems yet, however 80% of our job is knowing what *could* break as a result of the code we write, and covering all of those cases. Predicting, and preventing, what could break is built into how we think.  It takes years of experience to know where to draw the line with new features, and how to implement only what's necessary, nothing more, and nothing less.
   
   There are no "hard and fast" rules to prevent over-engineering, however MVP is often used as the basis for determing what work goes into the implementation of a feature. MVP should be used to determine what features to include as part of a product. It should not be used as an excluse to cannibalize the effort required to harden code and resolve technical debt.
+  
+  If you want high-quality code, don't use MVP to prevent engineers from working on code. Hire good, experienced senior engineers, and let them guide the discussions. 
 
 - **Good code should read like a good book, and should tell a good story**
 
