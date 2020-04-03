@@ -8,7 +8,9 @@
 
 - **If it doesn't add value, remove it**
 
-  This seems intuitive, but we do it all the time. Our brains are pattern-recognition machines, and the more code (and comments) that exist, the less efficient the machine operates.
+  This seems intuitive, but do unnecessary work all the time for all the wrong reasons. Take code comments, for example: some standards require comments for **everything**, but are they **all** necessary? Probably not. In-fact, with C#, I find that well-written code requires very few comments, and if the code doesn't "tell a story", then it's probably worth revising.
+  
+  Our brains are pattern-recognition machines, and the more code (and comments) that exist, the less efficient the machine operates.
   
   The most common example is with code comments that look like this:
   ```
@@ -22,8 +24,6 @@
   
   }
   ```
-  
-  The code does not add any more information about the function that doesn't already exist. If you find that you have a function that requires comments, it's likely that the method should be refactored.
   
   *If the justification is that there's a rule requiring that all code be commented, then it's a stupid rule and the rule needs to change. No rules should require you to perform work that does not add value. If boiler-plate comments are really necessary, the effort is better invested in code that can generate documentation where codecomments are absent.*
    
