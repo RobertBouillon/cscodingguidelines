@@ -22,7 +22,17 @@ The use-cases for DI are few, and while DI *can* make code easier to write, it m
 
   A [thread-static](https://docs.microsoft.com/en-us/dotnet/api/system.threadstaticattribute?view=netframework-4.8) member is a static class that is bound to the context of the executing thread, rather than the process. This is a superior alternative to DI in most circumstances.
 
-## Thread-Static Example
+### Thread-Static Guidelines & Considerations
+
+* **Prefer** the singleton pattern for asynchronous environments.
+
+  Thread-Static data is bound to the current thread, which can potentially cause issues in async code. If the user invokes an async method, which continues execution on a different thread, then the new thread will not have access to the thread-static data. In an async environment, the context class should be a singleton, which would allow the context to be passed to async functions as a reference via `SomeContext.Current`. The `Get` accessor for `Current` **should not** default to an instance, and instead throw an informative exception that the context is not available from the executing thread.
+  
+* **Prefer** static classes for synchronous environments (see example below).
+
+* **Avoid** appending the `Context` suffix to the name of a class that represents thread-static data.
+
+### Thread-Static Example
 
 ```csharp
 public static class WebRequest
