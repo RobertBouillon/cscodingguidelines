@@ -8,9 +8,9 @@
 
 - **If it doesn't add value, remove it**
 
-  This seems intuitive, but do unnecessary work all the time for all the wrong reasons. Take code comments, for example: some standards require comments for **everything**, but are they **all** necessary? Probably not. In-fact, with C#, I find that well-written code requires very few comments, and if the code doesn't "tell a story", then it's probably worth revising.
-  
   Our brains are pattern-recognition machines, and the more code (and comments) that exist, the less efficient the machine operates.
+  
+  This seems intuitive, but we do unnecessary work all the time for all the wrong reasons. Take code comments, for example: some standards require comments for **everything**, but are they **all** necessary? Probably not. In-fact, with C#, I find that well-written code requires very few comments, and if the code doesn't "tell a story", then it's probably worth revising. Before adding a comment, ask yourself if the code would benefit from refactoring, instead. Is it better to create a comment for a block of code, or refactor it to a method?
   
   The most common example is with code comments that look like this:
   ```
