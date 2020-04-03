@@ -44,7 +44,7 @@ public static class WebRequest
 public class WebServer
 {
   private Dictionary<string, Func<string>> WebPages { get; }
-  public void OnRequest(string url)
+  public void OnRequest(Url url)
   {
     //Set the context for the callee
     WebRequest.Url = url;
