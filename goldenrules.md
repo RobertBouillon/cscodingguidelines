@@ -6,7 +6,7 @@
   
   If your algorithm is not working properly in code, the first instinct of most programmers (myself included), is to debug the code; to find and tune the lines of code that are misbehaving. It's much easier to compare your code to the design to find errors than to try to debug the code to find errors. If it works on paper (or Excel, or whatever), it should work in code. Code is for implementing solutions - not designing them.
   
-  The same rules hold true when solving larger business problems. In most cases, the solution to a business problem is, in-fact, a process change, not a software change. Software will ultimately **automates** the business process, but foremost it's the buisiness process that has changed, not the software. When designing business software, the same rule applies - solve the problem outside of code, first. Identify which business processes need to be improved, how the problem is being solved today, and how the proposed solution would affect (and improve) the business process. 
+  The same rules hold true when solving larger business problems. In most cases, the solution to a business problem is, in-fact, a process change, not a software change. Software ultimately **automates** the business process, but foremost it's the buisiness process that has changed, not the software. When designing business software, the same rule applies - solve the problem outside of code, first. Identify which business processes need to be improved, how the problem is being solved today, and how the proposed solution would affect (and improve) the business process. 
 
 - **Code is a liability**
 
