@@ -1,5 +1,11 @@
 # Golden Rules for Software Engineering
 
+- **You don't solve problems with code**
+  
+  Code is the means by which solutions are implemented, not designed. The solution should be designed outside of code, first, and then implemented in code. This is an imortant distinction because it's very easy to get stuck in a loop, trying to solve a problem by changing code. This is especially true when implementing complex algorithms. Most complex mathematical algorithms can be expressed and solved far easier in tools other than code. I tend to design and test complex algorithms in Excel, first. MatLab is also a good option.
+  
+  If your algorithm is not working properly in code, the first instinct of most programmers (myself included), is to debug the code; to find and tune the lines of code that are misbehaving. It's much easier to compare your code to the design to find errors than to try to debug the code to find errors. If it works on paper (or Excel, or whatever), it should work in code. Code is for implementing solutions - not designing them.
+
 - **Code is a liability**
 
   Every line of code has the potential to be a bug. Every line of code needs to be visually processed by a developer, maintained and debugged, and worked by a compiler. This is why product managers can often shoot-down ideas for new features. Consider the entire cost of the feature, including testing & maintenance, before deciding to put it in.
