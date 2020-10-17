@@ -61,4 +61,7 @@
   
   Code should be simple.
   
-  
+- **Good code should be either intuitive or well-documented**
+
+  If adding a web page to your application requires 4 steps to work properly, those 4 steps should be documented. Don't leave it to the next developer to "figure out" how you did something, because the "next developer" might be you in 18 months, trying to figure out what you did and why. Don't rely on error handling to lead the next engineer to know what's going on - document it. If you're concerned that documentation is a waste of time, remember that it will take less time to document something than for the next developer to debug it to figure out what you should have already documented.
+
