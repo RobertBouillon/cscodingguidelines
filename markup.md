@@ -13,8 +13,10 @@ Class documentation should be relegated to an IDE window, and probably stored in
 
 ## Regions
 
-- DO use regions to group similar members together (fields, properties, constructors, methods, etc)
+- PREFER use regions to group similar members together (fields, properties, constructors, methods, etc)
 - AVOID using regions to group similar members for small files
+- PREFER to use regions to group members for implemented interfaces
+- CONSIDER using regions to group members that perform functions for a common feature, such as serialization
 - DO NOT mix region usage: either use regions to group all member types or none of them
 - DO use regions to wrap subclasses within a class, regardless of member type regions
 - PREFER regions to contain parameter validation.
