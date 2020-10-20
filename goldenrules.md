@@ -49,12 +49,8 @@
   
   MVP is not a good way to avoid over-engineering, as it's often an excuse to forego testing, documentation, and refactoring of complex code.
   
-  The essence of over-engineering is solving problems that aren't problems yet, however 80% of our job is knowing what *could* break as a result of the code we write, and covering all of those cases. Predicting, and preventing, what could break is built into how we think.  It takes years of experience to know where to draw the line with new features, and how to implement only what's necessary, nothing more, and nothing less.
+  There are many ways to solve a type of problem, but typically only one _right_ way to solve a specific instance of a problem. If you find yourself compromising on the _implementation_ of a feature, you're almost certainly creating technical debt, which needs to be logged. Sometimes it's appropriate to create technical debt, but under most circumstances, new technical debt should preclude the work from meeting the team's [definition of done"](https://medium.com/@anca_51481/user-story-definition-of-done-dod-in-agile-software-development-and-the-technical-debt-a3abf6821ef2#:~:text=If%20respected%2C%20the%20Definition%20of,temporary%20solutions%20or%20incomplete%20work.).
   
-  There are no "hard and fast" rules to prevent over-engineering, however MVP is often used as the basis for determing what work goes into the implementation of a feature. MVP should be used to determine what features to include as part of a product. It should not be used as an excluse to cannibalize the effort required to harden code and resolve technical debt.
-  
-  If you want high-quality code, don't use MVP to prevent engineers from working on code. Hire good, experienced senior engineers, and let them guide the discussions. 
-
 - **Good code should read like a good book, and should tell a good story**
 
   Reading code shouldn't be like deciphering hyroglyphics. This is especially applicable to C#, which has best-in-class support for object-oriented principles. 
