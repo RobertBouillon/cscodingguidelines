@@ -51,6 +51,8 @@
   
   There are many ways to solve a type of problem, but typically only one _right_ way to solve a specific instance of a problem. If you find yourself compromising on the _implementation_ of a feature, you're almost certainly creating technical debt, which needs to be logged. Sometimes it's appropriate to create technical debt, but under most circumstances, new technical debt should preclude the work from meeting the team's ["Definition of Done"](https://medium.com/@anca_51481/user-story-definition-of-done-dod-in-agile-software-development-and-the-technical-debt-a3abf6821ef2).
   
+  If you find yourself compromising on quality, ask yourself if it's technical debt or a feature, and log it.
+  
 - **Good code should read like a good book, and should tell a good story**
 
   Reading code shouldn't be like deciphering hyroglyphics. This is especially applicable to C#, which has best-in-class support for object-oriented principles. 
