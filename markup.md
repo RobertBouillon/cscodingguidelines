@@ -16,7 +16,7 @@ Class documentation should be relegated to an IDE window, and probably stored in
 - DO use regions to group similar members together (fields, properties, constructors, methods, etc)
 - AVOID using regions to group similar members for small files
 - DO NOT mix region usage: either use regions to group all member types or none of them
-- DO use regions for subclasses
-- PREFER regions for validation
+- DO use regions to wrap subclasses within a class, regardless of member type regions
+- PREFER regions to contain parameter validation.
 - DO NOT using regions inside members, (except for parameter validation) - if you need a region in a method, you should refactor that region to a private method, instead.
 
