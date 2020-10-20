@@ -3,7 +3,7 @@
 ## In-Line Documentation Comments
 C# offers in-line code comments via [codedoc](https://docs.microsoft.com/en-us/dotnet/csharp/codedoc). **Do _not_ use them.** 
 
-Codedoc comments are useful for two scenarios: documentation and intellisense. For the many times you'll be working in the code, the comments are only going to get in the way. Code comments are noise that will make it more difficult for your brain to "parse" the code, and will remove valuable real-estate from the screen to show the code - you know, the stuff you actually care about while working in the file. Interfaces (i.e. method signatures) rarely change, thus code comments should rarely change.
+Codedoc comments are useful for two scenarios: documentation and intellisense. For the many times you'll be working in the code, the comments are only going to get in the way. Code comments are noise that will make it more difficult for your brain to "parse" the code, and consume valuable real-estate from the screen that could be used to show code - you know, the stuff you actually care about while working in the file. Interfaces (i.e. method signatures) rarely change, thus code comments should rarely change.
 
 Codedoc was created in a time when well-documented code was a hallmark of a seasoned engineer, and were thus revered. Times have changed, and we recognize that code is better when you don't need documentation to understand what it's doing (that's arguably C#'s greatest strength). 
 
