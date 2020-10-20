@@ -12,7 +12,7 @@
 
   Every line of code has the potential to be a bug. Every line of code needs to be visually processed by a developer, maintained and debugged, and worked by a compiler. This is why product managers can often shoot-down ideas for new features. Consider the entire cost of the feature, including testing & maintenance, before deciding to put it in.
   
-  This **does not** mean that fewer lines of code is better, only that superfluous features should be ommitted from functionality.
+  This **does not** mean that fewer lines of code is better, only that superfluous features should be ommitted from functionality. If you can do the exact same thing with less code, always prefer the simpler solution.
 
 - **If it doesn't add value, remove it**
 
