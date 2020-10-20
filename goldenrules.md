@@ -49,7 +49,7 @@
   
   MVP is not a good way to avoid over-engineering, as it's often an excuse to forego testing, documentation, and refactoring of complex code.
   
-  There are many ways to solve a type of problem, but typically only one _right_ way to solve a specific instance of a problem. If you find yourself compromising on the _implementation_ of a feature, you're almost certainly creating technical debt, which needs to be logged. Sometimes it's appropriate to create technical debt, but under most circumstances, new technical debt should preclude the work from meeting the team's [definition of done"](https://medium.com/@anca_51481/user-story-definition-of-done-dod-in-agile-software-development-and-the-technical-debt-a3abf6821ef2#:~:text=If%20respected%2C%20the%20Definition%20of,temporary%20solutions%20or%20incomplete%20work.).
+  There are many ways to solve a type of problem, but typically only one _right_ way to solve a specific instance of a problem. If you find yourself compromising on the _implementation_ of a feature, you're almost certainly creating technical debt, which needs to be logged. Sometimes it's appropriate to create technical debt, but under most circumstances, new technical debt should preclude the work from meeting the team's ["Definition of Done"](https://medium.com/@anca_51481/user-story-definition-of-done-dod-in-agile-software-development-and-the-technical-debt-a3abf6821ef2).
   
 - **Good code should read like a good book, and should tell a good story**
 
