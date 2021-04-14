@@ -20,9 +20,11 @@ If you want to be able to debug your application, don't throw unnecessary except
 
 - **AVOID** Custom exception classes
 
-  Since exceptions should not be used to communicate normal, expected operations, receiving an exception should only result in a single exception flow. Changing the exception flow based on the type of exception is a deprecated pattern and generally indicates a poorly designed API that communicates via exception instead of returning data. As such, if you're creating a custom exception so that it can be handled differently than other exceptions, it probably indicates that the API should be returning data rather than raising an exception. As a rule, if it's not adding value, don't do it.
+  Custom exception types should only be created when very specific metadata must be captured for the purposes of **logging** in the event of an error. The type of exception raised should not change the control flow of the implementing code. Exceptions should only be raised for unexpected conditions because they are expensive - if a condition is expected and part of normal program flow, then an exception should not be used to communicate that condition. Metadata included as part of a custom exception should relate only to transient state that's otherwise not available to the caller at the time the exception is raised. If it's plausible that the information included in the exception would change the program flow, consider using a state-aware pattern for your API instead, such as `bool TryX(intput, var result)`.
+  
+  only
 
-- **PREFER** Existing exception classes over custom classes for returning additional data.
+- **PREFER** Existing exception classes over custom classes for returning capturing exception metadata.
 
   The Message property should describe the nature of the problem. If the exception *can* be described in a string, it *should* be. 
   
