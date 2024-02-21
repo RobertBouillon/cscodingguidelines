@@ -29,6 +29,8 @@
 
 - Prefer to return `Task.CompletedTask` for methods which run synchronously.
 
+- Disposable objects must implement `IAsyncDisposable` ([link](https://learn.microsoft.com/en-us/dotnet/standard/garbage-collection/implementing-disposeasync)) when applicable
+
 
 ## Costs & Considerations
 
@@ -44,16 +46,17 @@
 
 - Cannot use `out` or `ref` parameters
 
-- Method chaining is not clean
+  - Cannot use `Span<T>` parameters as they're a `ref struct`
 
-- Disposable objects must implement `IAsyncDisposable` ([link](https://learn.microsoft.com/en-us/dotnet/standard/garbage-collection/implementing-disposeasync))
+- Method chaining is not clean
 
 - LINQ is [slower](https://github.com/JoshClose/CsvHelper/issues/1560), functionality is [limited](https://stackoverflow.com/questions/59689529/return-iasyncenumerable-from-an-async-method), and requires [third-party API's](https://www.nuget.org/packages/System.Linq.Async) to fully utilize.
 
-- [ConfigureAwait](https://devblogs.microsoft.com/dotnet/configureawait-faq/) boiler-plate is required to prevent deadlocks if the code may be used in [synchronization contexts](https://learn.microsoft.com/en-us/archive/msdn-magazine/2011/february/msdn-magazine-parallel-computing-it-s-all-about-the-synchronizationcontext) which are single-threaded.
+- [ConfigureAwait](https://devblogs.microsoft.com/dotnet/configureawait-faq/) boiler-plate is required to [prevent deadlocks](https://learn.microsoft.com/en-us/archive/msdn-magazine/2011/february/msdn-magazine-parallel-computing-it-s-all-about-the-synchronizationcontext) 
 
 - Call stack is [not always accessible behind awaited calls](https://learn.microsoft.com/en-us/archive/msdn-magazine/2013/february/async-programming-async-causality-chain-tracking). Notably this limits debugging run-time errors with stack traces.
 
+- Property accessors cannot use async methods or code (accessors are synchronous and using async code can cause deadlocks)
 
 ## Common Pitfalls
 
