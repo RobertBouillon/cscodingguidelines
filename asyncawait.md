@@ -4,7 +4,9 @@
 
 - Avoid async/await outside of environments with high-volume context switching.
 
-  There's no benefit, only cost (and several [caveats](#common-pitfalls)) to using async/await over traditional threading. A synchronous API is simpler and functionality is more predictable. Generally speaking, this limits async/await to ASP.NET and network applications.
+  The main benefit to cooperative multitasking is avoiding context switches. Do not use async/await unless your application's performance profile indicates significant time lost to context switches. There is a cost to async/await that is not recuperated unless the time is gained back by avoiding excessive context switching.
+  
+  A synchronous API is simpler and functionality is more predictable. Generally speaking, this limits async/await to ASP.NET and network applications.
 
 - Avoid `ValueTask`
 
