@@ -23,6 +23,10 @@
 
   The preferred method produces a better stack trace
 
+- Prefer to [elide tasks](https://blog.stephencleary.com/2016/12/eliding-async-await.html) when possible
+
+- Prefer to return `Task.CompletedTask` for methods which run synchronously.
+
 
 ## Costs & Considerations
 
